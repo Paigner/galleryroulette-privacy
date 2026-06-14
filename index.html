@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GalleryRoulette - Datenschutzerklärung / Privacy Policy</title>
+  <style>
+    :root {
+      --bg: #0A0A12;
+      --surface: #111119;
+      --border: #252535;
+      --primary: #A855F7;
+      --text: #FFFFFF;
+      --muted: #9CA3AF;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+    }
+    .wrap { max-width: 760px; margin: 0 auto; padding: 32px 20px 80px; }
+    header { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px; margin-bottom: 8px; }
+    h1 { font-size: 1.7rem; margin: 0; }
+    h2 { font-size: 1.15rem; margin: 32px 0 8px; color: var(--primary); }
+    h3 { font-size: 1rem; margin: 20px 0 4px; }
+    p, li { color: #D5D5E0; }
+    a { color: var(--primary); }
+    .muted { color: var(--muted); font-size: 0.9rem; }
+    .toggle { display: flex; gap: 4px; background: var(--surface); border: 1px solid var(--border); border-radius: 10px; padding: 4px; }
+    .toggle button {
+      background: transparent; color: var(--muted); border: none; padding: 6px 14px;
+      border-radius: 7px; cursor: pointer; font-size: 0.9rem; font-weight: 600;
+    }
+    .toggle button.active { background: var(--primary); color: #fff; }
+    section[lang] { display: none; }
+    section.show { display: block; }
+    .box { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 16px 20px; margin-top: 12px; }
+    code { background: #1a1a26; padding: 1px 6px; border-radius: 4px; }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <h1>GalleryRoulette</h1>
+      <div class="toggle">
+        <button id="btn-de" class="active" onclick="show('de')">Deutsch</button>
+        <button id="btn-en" onclick="show('en')">English</button>
+      </div>
+    </header>
+
+    <!-- ============================== DEUTSCH ============================== -->
+    <section lang="de" class="show">
+      <h2>Datenschutzerklärung</h2>
+      <p class="muted">Stand: 15. Juni 2026</p>
+
+      <h3>1. Verantwortlicher</h3>
+      <div class="box">
+        <p>
+          Philipp Aigner<br />
+          Arndtstraße 48<br />
+          1120 Wien, Österreich<br />
+          E-Mail: <a class="email" data-user="galleryroulette" data-domain="paigner.at"><noscript>galleryroulette [at] paigner.at</noscript></a>
+        </p>
+      </div>
+
+      <h3>2. Überblick</h3>
+      <p>
+        GalleryRoulette ist ein Multiplayer-Ratespiel. Die Mitspieler sehen zufällige Fotos aus den
+        Galerien der anderen Teilnehmer und raten, wem das Foto gehört. Diese Erklärung beschreibt,
+        welche personenbezogenen Daten wir verarbeiten, wenn du die App nutzt.
+      </p>
+
+      <h3>3. Welche Daten wir verarbeiten</h3>
+      <ul>
+        <li><strong>Gast-Nutzung:</strong> Spitzname (frei wählbar) sowie technische Verbindungsdaten,
+          solange du in einem Spielraum bist. Es ist kein Konto erforderlich.</li>
+        <li><strong>Konto (optional):</strong> E-Mail-Adresse, Passwort (sicher gehasht gespeichert),
+          Anzeigename und - falls hochgeladen - ein Profilbild.</li>
+        <li><strong>Statistiken &amp; Bestenliste:</strong> Wenn du angemeldet bist, speichern wir
+          Spielstatistiken (z. B. gespielte Spiele, Siege, Gesamtpunkte) und zeigen deinen Anzeigenamen
+          zusammen mit diesen Werten in einer öffentlich einsehbaren Bestenliste an. Als Gast wirst du
+          nicht in der Bestenliste geführt.</li>
+        <li><strong>Spiel-Fotos:</strong> Die Fotos, die du während eines Spiels aus deiner Galerie
+          auswählst, werden hochgeladen und für die Dauer des Spiels den Mitspielern angezeigt.</li>
+        <li><strong>Server-Logs:</strong> Beim Verbinden verarbeitet unser Spielserver technische Daten
+          wie deine IP-Adresse und Zeitstempel, um die App bereitzustellen und Missbrauch abzuwehren.
+          </li>
+      </ul>
+
+      <h3>4. Zwecke und Rechtsgrundlagen</h3>
+      <ul>
+        <li>Bereitstellung des Spiels und der Spielräume (Art. 6 Abs. 1 lit. b DSGVO - Vertrag/Nutzung).</li>
+        <li>Verwaltung deines Kontos und Profilbilds, sofern du dich anmeldest (Art. 6 Abs. 1 lit. b DSGVO).</li>
+        <li>Anzeige deiner ausgewählten Fotos für Mitspieler als Kern-Spielmechanik (Art. 6 Abs. 1 lit. b DSGVO).</li>
+        <li>Führen von Spielstatistiken und einer öffentlichen Bestenliste für angemeldete Nutzer (Art. 6 Abs. 1 lit. b DSGVO).</li>
+        <li>Sicherheit und Missbrauchsabwehr, z. B. Begrenzung der Upload-Häufigkeit anhand der IP-Adresse (Art. 6 Abs. 1 lit. f DSGVO - berechtigtes Interesse).</li>
+      </ul>
+
+      <h3>5. Wichtiger Hinweis zu Fotos von Personen</h3>
+      <div class="box">
+        <p>
+          Wenn deine Fotos andere Personen abbilden, werden diese während des Spiels für die Mitspieler
+          sichtbar. Lade nur Fotos hoch, an denen du die Rechte hast und - soweit erforderlich - das
+          Einverständnis der abgebildeten Personen. Du bist für die von dir ausgewählten Inhalte selbst
+          verantwortlich.
+        </p>
+      </div>
+
+      <h3>6. Speicherdauer</h3>
+      <ul>
+        <li><strong>Spiel-Fotos:</strong> werden nur temporär auf dem Spielserver gehalten und spätestens
+          nach <strong>2 Stunden automatisch gelöscht</strong> (in der Regel früher, mit Ende des Spiels).</li>
+        <li><strong>Server-Logs (IP-Adresse):</strong> werden nur kurzzeitig zur Bereitstellung und
+          Missbrauchsabwehr verarbeitet und nicht dauerhaft gespeichert.</li>
+        <li><strong>Konto-Daten, Profilbild und Statistiken:</strong> bis du dein Konto löschst.</li>
+      </ul>
+
+      <h3>7. Empfänger / Auftragsverarbeiter</h3>
+      <p>
+        Zur Bereitstellung der App setzen wir <strong>Supabase</strong> (Authentifizierung, Datenbank,
+        Speicher für Profilbilder) als Auftragsverarbeiter ein. Die temporären Spiel-Fotos werden auf
+        unserem Spielserver verarbeitet. Die öffentliche Bestenliste (Anzeigename und Spielstatistiken)
+        ist für alle Nutzer der App sichtbar. Wir nutzen keine Werbe-, Tracking- oder Analyse-Dienste und
+        geben deine Daten nicht zu Werbezwecken weiter. Es findet keine automatisierte
+        Entscheidungsfindung oder Profilbildung statt.
+      </p>
+      <p>
+        <strong>Speicherort:</strong> Unser Spielserver wird bei <strong>Oracle Cloud Infrastructure</strong>
+        in der Region Frankfurt am Main (Deutschland, EU) betrieben. <strong>Supabase</strong> verarbeitet
+        Daten je nach Konfiguration ggf. auch außerhalb der EU. Soweit dabei eine Übermittlung in ein
+        Drittland (z. B. USA) erfolgt, ist diese durch die von der EU-Kommission erlassenen
+        <strong>Standardvertragsklauseln</strong> abgesichert.
+      </p>
+
+      <h3>8. Deine Rechte</h3>
+      <p>
+        Du hast das Recht auf Auskunft, Berichtigung, Löschung, Einschränkung der Verarbeitung,
+        Datenübertragbarkeit und Widerspruch. Zudem kannst du dich bei einer Aufsichtsbehörde beschweren -
+        in Österreich bei der Österreichischen Datenschutzbehörde (dsb.gv.at).
+      </p>
+      <p>
+        <strong>Konto-Löschung:</strong> Du kannst dein Konto jederzeit direkt in der App unter
+        <em>Profil → Account löschen</em> endgültig entfernen. Dabei werden dein Konto, dein Profilbild
+        und die zugehörigen Daten gelöscht.
+      </p>
+
+      <h3>9. Kinder</h3>
+      <p>
+        Die App richtet sich nicht an junge Kinder. In Österreich ist für die eigenständige Nutzung ein
+        Mindestalter von 14 Jahren erforderlich; in anderen Ländern gilt das jeweils lokal vorgeschriebene
+        Mindestalter. Nutze die App nur, wenn du dieses Alter erreicht hast.
+      </p>
+
+      <h3>10. Änderungen</h3>
+      <p>
+        Wir können diese Erklärung anpassen. Die jeweils aktuelle Fassung ist über diese Seite abrufbar.
+      </p>
+    </section>
+
+    <!-- ============================== ENGLISH ============================== -->
+    <section lang="en">
+      <h2>Privacy Policy</h2>
+      <p class="muted">Last updated: 15 June 2026</p>
+
+      <h3>1. Data Controller</h3>
+      <div class="box">
+        <p>
+          Philipp Aigner<br />
+          Arndtstraße 48<br />
+          1120 Vienna, Austria<br />
+          Email: <a class="email" data-user="galleryroulette" data-domain="paigner.at"><noscript>galleryroulette [at] paigner.at</noscript></a>
+        </p>
+      </div>
+
+      <h3>2. Overview</h3>
+      <p>
+        GalleryRoulette is a multiplayer guessing game. Players see random photos from other participants'
+        galleries and guess whom each photo belongs to. This policy explains which personal data we process
+        when you use the app.
+      </p>
+
+      <h3>3. Data we process</h3>
+      <ul>
+        <li><strong>Guest use:</strong> a nickname of your choice and technical connection data for as long
+          as you are in a game room. No account is required.</li>
+        <li><strong>Account (optional):</strong> email address, password (stored hashed), display name
+          and - if uploaded - a profile picture.</li>
+        <li><strong>Statistics &amp; leaderboard:</strong> if you are signed in, we store game statistics
+          (e.g. games played, wins, total score) and display your display name together with these values
+          on a publicly visible leaderboard. Guests are not included in the leaderboard.</li>
+        <li><strong>Game photos:</strong> the photos you select from your gallery during a game are uploaded
+          and shown to fellow players for the duration of the game.</li>
+        <li><strong>Server logs:</strong> when connecting, our game server processes technical data such as
+          your IP address and timestamps to provide the app and prevent abuse.</li>
+      </ul>
+
+      <h3>4. Purposes and legal bases</h3>
+      <ul>
+        <li>Providing the game and game rooms (Art. 6(1)(b) GDPR - performance/use).</li>
+        <li>Managing your account and profile picture if you sign in (Art. 6(1)(b) GDPR).</li>
+        <li>Showing your selected photos to other players as the core game mechanic (Art. 6(1)(b) GDPR).</li>
+        <li>Keeping game statistics and a public leaderboard for signed-in users (Art. 6(1)(b) GDPR).</li>
+        <li>Security and abuse prevention, e.g. limiting upload frequency based on IP address (Art. 6(1)(f) GDPR - legitimate interest).</li>
+      </ul>
+
+      <h3>5. Important note about photos of people</h3>
+      <div class="box">
+        <p>
+          If your photos depict other people, those people become visible to fellow players during the game.
+          Only upload photos you have the rights to and - where required - the consent of the people shown.
+          You are responsible for the content you select.
+        </p>
+      </div>
+
+      <h3>6. Retention</h3>
+      <ul>
+        <li><strong>Game photos:</strong> held only temporarily on the game server and
+          <strong>automatically deleted after at most 2 hours</strong> (usually sooner, when the game ends).</li>
+        <li><strong>Server logs (IP address):</strong> processed only transiently for operation and abuse
+          prevention and not stored permanently.</li>
+        <li><strong>Account data, profile picture and statistics:</strong> until you delete your account.</li>
+      </ul>
+
+      <h3>7. Recipients / processors</h3>
+      <p>
+        To provide the app we use <strong>Supabase</strong> (authentication, database, storage for profile
+        pictures) as a processor. Temporary game photos are processed on our game server. The public
+        leaderboard (display name and game statistics) is visible to all users of the app. We do not use any
+        advertising, tracking or analytics services and do not share your data for advertising purposes.
+        There is no automated decision-making or profiling.
+      </p>
+      <p>
+        <strong>Storage location:</strong> Our game server is operated on <strong>Oracle Cloud
+        Infrastructure</strong> in the Frankfurt am Main region (Germany, EU). Depending on its
+        configuration, <strong>Supabase</strong> may also process data outside the EU. Where such a transfer
+        to a third country (e.g. the USA) takes place, it is safeguarded by the
+        <strong>Standard Contractual Clauses</strong> adopted by the EU Commission.
+      </p>
+
+      <h3>8. Your rights</h3>
+      <p>
+        You have the right to access, rectification, erasure, restriction of processing, data portability and
+        objection. You may also lodge a complaint with a supervisory authority - in Austria, the Austrian
+        Data Protection Authority (dsb.gv.at).
+      </p>
+      <p>
+        <strong>Account deletion:</strong> You can permanently delete your account at any time directly in the
+        app under <em>Profile → Delete account</em>. This removes your account, profile picture and related data.
+      </p>
+
+      <h3>9. Children</h3>
+      <p>
+        The app is not directed at young children. In Austria, a minimum age of 14 applies to using it
+        independently; in other countries the minimum age required by your local law applies. Only use the
+        app if you have reached that age.
+      </p>
+
+      <h3>10. Changes</h3>
+      <p>
+        We may update this policy. The current version is always available on this page.
+      </p>
+    </section>
+  </div>
+
+  <script>
+    function show(lang) {
+      document.querySelectorAll('section[lang]').forEach(function (s) {
+        s.classList.toggle('show', s.getAttribute('lang') === lang);
+      });
+      document.getElementById('btn-de').classList.toggle('active', lang === 'de');
+      document.getElementById('btn-en').classList.toggle('active', lang === 'en');
+      document.documentElement.setAttribute('lang', lang);
+    }
+    // Standard nach Browsersprache: Deutsch -> de, sonst en.
+    show((navigator.language || 'de').toLowerCase().startsWith('de') ? 'de' : 'en');
+
+    // E-Mail erst im Browser zusammensetzen (Schutz gegen naive Scraper).
+    // Die vollständige Adresse steht nirgends zusammenhängend im Quelltext.
+    document.querySelectorAll('a.email').forEach(function (a) {
+      var addr = a.getAttribute('data-user') + '@' + a.getAttribute('data-domain');
+      a.setAttribute('href', 'mailto:' + addr);
+      a.textContent = addr;
+    });
+  </script>
+</body>
+</html>
