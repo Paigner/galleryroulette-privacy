@@ -88,6 +88,10 @@
         <li><strong>Server-Logs:</strong> Beim Verbinden verarbeitet unser Spielserver technische Daten
           wie deine IP-Adresse und Zeitstempel, um die App bereitzustellen und Missbrauch abzuwehren.
           </li>
+        <li><strong>Fehler- und Absturzberichte:</strong> Tritt ein technischer Fehler auf, übermitteln wir
+          zur Fehleranalyse technische Angaben (z. B. IP-Adresse, Anfrage-Metadaten und Fehlerdetails wie
+          Stacktraces) an unseren Monitoring-Dienst. Diese Berichte dienen ausschließlich der Stabilität und
+          Sicherheit der App und werden nicht zu Werbe- oder Analysezwecken genutzt.</li>
       </ul>
 
       <h3>4. Zwecke und Rechtsgrundlagen</h3>
@@ -97,6 +101,7 @@
         <li>Anzeige deiner ausgewählten Fotos für Mitspieler als Kern-Spielmechanik (Art. 6 Abs. 1 lit. b DSGVO).</li>
         <li>Führen von Spielstatistiken und einer öffentlichen Bestenliste für angemeldete Nutzer (Art. 6 Abs. 1 lit. b DSGVO).</li>
         <li>Sicherheit und Missbrauchsabwehr, z. B. Begrenzung der Upload-Häufigkeit anhand der IP-Adresse (Art. 6 Abs. 1 lit. f DSGVO - berechtigtes Interesse).</li>
+        <li>Fehler- und Absturzüberwachung zur Gewährleistung der Stabilität und Sicherheit der App (Art. 6 Abs. 1 lit. f DSGVO - berechtigtes Interesse).</li>
       </ul>
 
       <h3>5. Wichtiger Hinweis zu Fotos von Personen</h3>
@@ -115,23 +120,28 @@
           nach <strong>2 Stunden automatisch gelöscht</strong> (in der Regel früher, mit Ende des Spiels).</li>
         <li><strong>Server-Logs (IP-Adresse):</strong> werden nur kurzzeitig zur Bereitstellung und
           Missbrauchsabwehr verarbeitet und nicht dauerhaft gespeichert.</li>
+        <li><strong>Fehler- und Absturzberichte:</strong> werden bei unserem Monitoring-Dienst nur für eine
+          begrenzte Zeit (in der Regel bis zu 90 Tage) gespeichert und danach automatisch gelöscht.</li>
         <li><strong>Konto-Daten, Profilbild und Statistiken:</strong> bis du dein Konto löschst.</li>
       </ul>
 
       <h3>7. Empfänger / Auftragsverarbeiter</h3>
       <p>
         Zur Bereitstellung der App setzen wir <strong>Supabase</strong> (Authentifizierung, Datenbank,
-        Speicher für Profilbilder) als Auftragsverarbeiter ein. Die temporären Spiel-Fotos werden auf
-        unserem Spielserver verarbeitet. Die öffentliche Bestenliste (Anzeigename und Spielstatistiken)
+        Speicher für Profilbilder) als Auftragsverarbeiter ein. Für die Fehler- und Absturzüberwachung nutzen
+        wir <strong>Sentry</strong> (Functional Software, Inc.) als Auftragsverarbeiter. Die temporären
+        Spiel-Fotos werden auf unserem Spielserver verarbeitet. Die öffentliche Bestenliste (Anzeigename und Spielstatistiken)
         ist für alle Nutzer der App sichtbar. Wir nutzen keine Werbe-, Tracking- oder Analyse-Dienste und
         geben deine Daten nicht zu Werbezwecken weiter. Es findet keine automatisierte
         Entscheidungsfindung oder Profilbildung statt.
       </p>
       <p>
         <strong>Speicherort:</strong> Unser Spielserver wird bei <strong>Oracle Cloud Infrastructure</strong>
-        in der Region Frankfurt am Main (Deutschland, EU) betrieben. <strong>Supabase</strong> verarbeitet
-        Daten je nach Konfiguration ggf. auch außerhalb der EU. Soweit dabei eine Übermittlung in ein
-        Drittland (z. B. USA) erfolgt, ist diese durch die von der EU-Kommission erlassenen
+        in der Region Frankfurt am Main (Deutschland, EU) betrieben. <strong>Sentry</strong> ist so
+        konfiguriert, dass die Fehlerberichte in der EU-Region (Frankfurt am Main, Deutschland) verarbeitet
+        werden. <strong>Supabase</strong> verarbeitet Daten je nach Konfiguration ggf. auch außerhalb der EU.
+        Soweit bei einem dieser Dienste eine Übermittlung in ein Drittland (z. B. USA) erfolgt - etwa weil der
+        Anbieter dort seinen Sitz hat -, ist diese durch die von der EU-Kommission erlassenen
         <strong>Standardvertragsklauseln</strong> abgesichert.
       </p>
 
@@ -195,6 +205,10 @@
           and shown to fellow players for the duration of the game.</li>
         <li><strong>Server logs:</strong> when connecting, our game server processes technical data such as
           your IP address and timestamps to provide the app and prevent abuse.</li>
+        <li><strong>Error and crash reports:</strong> if a technical error occurs, we transmit technical
+          details (e.g. IP address, request metadata and error details such as stack traces) to our monitoring
+          service for diagnostics. These reports serve solely the stability and security of the app and are
+          not used for advertising or analytics.</li>
       </ul>
 
       <h3>4. Purposes and legal bases</h3>
@@ -204,6 +218,7 @@
         <li>Showing your selected photos to other players as the core game mechanic (Art. 6(1)(b) GDPR).</li>
         <li>Keeping game statistics and a public leaderboard for signed-in users (Art. 6(1)(b) GDPR).</li>
         <li>Security and abuse prevention, e.g. limiting upload frequency based on IP address (Art. 6(1)(f) GDPR - legitimate interest).</li>
+        <li>Error and crash monitoring to ensure the stability and security of the app (Art. 6(1)(f) GDPR - legitimate interest).</li>
       </ul>
 
       <h3>5. Important note about photos of people</h3>
@@ -221,23 +236,28 @@
           <strong>automatically deleted after at most 2 hours</strong> (usually sooner, when the game ends).</li>
         <li><strong>Server logs (IP address):</strong> processed only transiently for operation and abuse
           prevention and not stored permanently.</li>
+        <li><strong>Error and crash reports:</strong> retained by our monitoring service only for a limited
+          period (typically up to 90 days) and then deleted automatically.</li>
         <li><strong>Account data, profile picture and statistics:</strong> until you delete your account.</li>
       </ul>
 
       <h3>7. Recipients / processors</h3>
       <p>
         To provide the app we use <strong>Supabase</strong> (authentication, database, storage for profile
-        pictures) as a processor. Temporary game photos are processed on our game server. The public
+        pictures) as a processor. For error and crash monitoring we use <strong>Sentry</strong> (Functional
+        Software, Inc.) as a processor. Temporary game photos are processed on our game server. The public
         leaderboard (display name and game statistics) is visible to all users of the app. We do not use any
         advertising, tracking or analytics services and do not share your data for advertising purposes.
         There is no automated decision-making or profiling.
       </p>
       <p>
         <strong>Storage location:</strong> Our game server is operated on <strong>Oracle Cloud
-        Infrastructure</strong> in the Frankfurt am Main region (Germany, EU). Depending on its
-        configuration, <strong>Supabase</strong> may also process data outside the EU. Where such a transfer
-        to a third country (e.g. the USA) takes place, it is safeguarded by the
-        <strong>Standard Contractual Clauses</strong> adopted by the EU Commission.
+        Infrastructure</strong> in the Frankfurt am Main region (Germany, EU). <strong>Sentry</strong> is
+        configured to process error reports in its EU region (Frankfurt am Main, Germany). Depending on its
+        configuration, <strong>Supabase</strong> may also process data outside the EU. Where a transfer to a
+        third country (e.g. the USA) takes place for any of these services - for instance because the provider
+        is based there - it is safeguarded by the <strong>Standard Contractual Clauses</strong> adopted by the
+        EU Commission.
       </p>
 
       <h3>8. Your rights</h3>
