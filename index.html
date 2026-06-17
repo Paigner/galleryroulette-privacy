@@ -54,7 +54,7 @@
     <!-- ============================== DEUTSCH ============================== -->
     <section lang="de" class="show">
       <h2>Datenschutzerklärung</h2>
-      <p class="muted">Stand: 15. Juni 2026</p>
+      <p class="muted">Stand: 17. Juni 2026</p>
 
       <h3>1. Verantwortlicher</h3>
       <div class="box">
@@ -79,6 +79,9 @@
           solange du in einem Spielraum bist. Es ist kein Konto erforderlich.</li>
         <li><strong>Konto (optional):</strong> E-Mail-Adresse, Passwort (sicher gehasht gespeichert),
           Anzeigename und - falls hochgeladen - ein Profilbild.</li>
+        <li><strong>Konto-E-Mails:</strong> Zur Verwaltung deines Kontos versenden wir transaktionale
+          E-Mails (z. B. Bestätigung der Registrierung, Passwort-Zurücksetzen) über einen
+          E-Mail-Versanddienstleister. Dabei wird deine E-Mail-Adresse verarbeitet.</li>
         <li><strong>Statistiken &amp; Bestenliste:</strong> Wenn du angemeldet bist, speichern wir
           Spielstatistiken (z. B. gespielte Spiele, Siege, Gesamtpunkte) und zeigen deinen Anzeigenamen
           zusammen mit diesen Werten in einer öffentlich einsehbaren Bestenliste an. Als Gast wirst du
@@ -98,6 +101,7 @@
       <ul>
         <li>Bereitstellung des Spiels und der Spielräume (Art. 6 Abs. 1 lit. b DSGVO - Vertrag/Nutzung).</li>
         <li>Verwaltung deines Kontos und Profilbilds, sofern du dich anmeldest (Art. 6 Abs. 1 lit. b DSGVO).</li>
+        <li>Versand transaktionaler Konto-E-Mails (z. B. Registrierungsbestätigung, Passwort-Zurücksetzen) (Art. 6 Abs. 1 lit. b DSGVO).</li>
         <li>Anzeige deiner ausgewählten Fotos für Mitspieler als Kern-Spielmechanik (Art. 6 Abs. 1 lit. b DSGVO).</li>
         <li>Führen von Spielstatistiken und einer öffentlichen Bestenliste für angemeldete Nutzer (Art. 6 Abs. 1 lit. b DSGVO).</li>
         <li>Sicherheit und Missbrauchsabwehr, z. B. Begrenzung der Upload-Häufigkeit anhand der IP-Adresse (Art. 6 Abs. 1 lit. f DSGVO - berechtigtes Interesse).</li>
@@ -122,6 +126,8 @@
           Missbrauchsabwehr verarbeitet und nicht dauerhaft gespeichert.</li>
         <li><strong>Fehler- und Absturzberichte:</strong> werden bei unserem Monitoring-Dienst nur für eine
           begrenzte Zeit (in der Regel bis zu 90 Tage) gespeichert und danach automatisch gelöscht.</li>
+        <li><strong>Versandprotokolle der Konto-E-Mails:</strong> werden bei unserem E-Mail-Versanddienstleister
+          nur für eine begrenzte Zeit zur Zustellung und Fehlersuche gespeichert und danach automatisch gelöscht.</li>
         <li><strong>Konto-Daten, Profilbild und Statistiken:</strong> bis du dein Konto löschst.</li>
       </ul>
 
@@ -129,7 +135,9 @@
       <p>
         Zur Bereitstellung der App setzen wir <strong>Supabase</strong> (Authentifizierung, Datenbank,
         Speicher für Profilbilder) als Auftragsverarbeiter ein. Für die Fehler- und Absturzüberwachung nutzen
-        wir <strong>Sentry</strong> (Functional Software, Inc.) als Auftragsverarbeiter. Die temporären
+        wir <strong>Sentry</strong> (Functional Software, Inc.) als Auftragsverarbeiter. Für den Versand
+        transaktionaler Konto-E-Mails (z. B. Registrierungsbestätigung, Passwort-Zurücksetzen) nutzen wir
+        <strong>Resend</strong> (Resend, Inc.) als Auftragsverarbeiter. Die temporären
         Spiel-Fotos werden auf unserem Spielserver verarbeitet. Die öffentliche Bestenliste (Anzeigename und Spielstatistiken)
         ist für alle Nutzer der App sichtbar. Wir nutzen keine Werbe-, Tracking- oder Analyse-Dienste und
         geben deine Daten nicht zu Werbezwecken weiter. Es findet keine automatisierte
@@ -140,7 +148,8 @@
         in der Region Frankfurt am Main (Deutschland, EU) betrieben. <strong>Sentry</strong> ist so
         konfiguriert, dass die Fehlerberichte in der EU-Region (Frankfurt am Main, Deutschland) verarbeitet
         werden. <strong>Supabase</strong> verarbeitet Daten je nach Konfiguration ggf. auch außerhalb der EU.
-        Soweit bei einem dieser Dienste eine Übermittlung in ein Drittland (z. B. USA) erfolgt - etwa weil der
+        <strong>Resend</strong> (Resend, Inc.) hat seinen Sitz in den USA und verarbeitet die zum E-Mail-Versand
+        nötigen Daten ggf. dort. Soweit bei einem dieser Dienste eine Übermittlung in ein Drittland (z. B. USA) erfolgt - etwa weil der
         Anbieter dort seinen Sitz hat -, ist diese durch die von der EU-Kommission erlassenen
         <strong>Standardvertragsklauseln</strong> abgesichert.
       </p>
@@ -173,7 +182,7 @@
     <!-- ============================== ENGLISH ============================== -->
     <section lang="en">
       <h2>Privacy Policy</h2>
-      <p class="muted">Last updated: 15 June 2026</p>
+      <p class="muted">Last updated: 17 June 2026</p>
 
       <h3>1. Data Controller</h3>
       <div class="box">
@@ -198,6 +207,9 @@
           as you are in a game room. No account is required.</li>
         <li><strong>Account (optional):</strong> email address, password (stored hashed), display name
           and - if uploaded - a profile picture.</li>
+        <li><strong>Account emails:</strong> to manage your account we send transactional emails (e.g.
+          sign-up confirmation, password reset) via an email delivery provider. This processes your email
+          address.</li>
         <li><strong>Statistics &amp; leaderboard:</strong> if you are signed in, we store game statistics
           (e.g. games played, wins, total score) and display your display name together with these values
           on a publicly visible leaderboard. Guests are not included in the leaderboard.</li>
@@ -215,6 +227,7 @@
       <ul>
         <li>Providing the game and game rooms (Art. 6(1)(b) GDPR - performance/use).</li>
         <li>Managing your account and profile picture if you sign in (Art. 6(1)(b) GDPR).</li>
+        <li>Sending transactional account emails (e.g. sign-up confirmation, password reset) (Art. 6(1)(b) GDPR).</li>
         <li>Showing your selected photos to other players as the core game mechanic (Art. 6(1)(b) GDPR).</li>
         <li>Keeping game statistics and a public leaderboard for signed-in users (Art. 6(1)(b) GDPR).</li>
         <li>Security and abuse prevention, e.g. limiting upload frequency based on IP address (Art. 6(1)(f) GDPR - legitimate interest).</li>
@@ -238,6 +251,8 @@
           prevention and not stored permanently.</li>
         <li><strong>Error and crash reports:</strong> retained by our monitoring service only for a limited
           period (typically up to 90 days) and then deleted automatically.</li>
+        <li><strong>Account email delivery logs:</strong> retained by our email delivery provider only for a
+          limited period for delivery and troubleshooting, then deleted automatically.</li>
         <li><strong>Account data, profile picture and statistics:</strong> until you delete your account.</li>
       </ul>
 
@@ -245,7 +260,9 @@
       <p>
         To provide the app we use <strong>Supabase</strong> (authentication, database, storage for profile
         pictures) as a processor. For error and crash monitoring we use <strong>Sentry</strong> (Functional
-        Software, Inc.) as a processor. Temporary game photos are processed on our game server. The public
+        Software, Inc.) as a processor. For sending transactional account emails (e.g. sign-up confirmation,
+        password reset) we use <strong>Resend</strong> (Resend, Inc.) as a processor. Temporary game photos
+        are processed on our game server. The public
         leaderboard (display name and game statistics) is visible to all users of the app. We do not use any
         advertising, tracking or analytics services and do not share your data for advertising purposes.
         There is no automated decision-making or profiling.
@@ -254,8 +271,9 @@
         <strong>Storage location:</strong> Our game server is operated on <strong>Oracle Cloud
         Infrastructure</strong> in the Frankfurt am Main region (Germany, EU). <strong>Sentry</strong> is
         configured to process error reports in its EU region (Frankfurt am Main, Germany). Depending on its
-        configuration, <strong>Supabase</strong> may also process data outside the EU. Where a transfer to a
-        third country (e.g. the USA) takes place for any of these services - for instance because the provider
+        configuration, <strong>Supabase</strong> may also process data outside the EU. <strong>Resend</strong>
+        (Resend, Inc.) is based in the USA and may process the data required to send emails there. Where a
+        transfer to a third country (e.g. the USA) takes place for any of these services - for instance because the provider
         is based there - it is safeguarded by the <strong>Standard Contractual Clauses</strong> adopted by the
         EU Commission.
       </p>
