@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="de">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -46,34 +46,24 @@
     <header>
       <h1>GalleryRoulette</h1>
       <div class="toggle">
-        <button id="btn-de" class="active" onclick="show('de')">Deutsch</button>
-        <button id="btn-en" onclick="show('en')">English</button>
+        <button id="btn-en" class="active" onclick="show('en')">English</button>
+        <button id="btn-de" onclick="show('de')">Deutsch</button>
       </div>
     </header>
 
     <!-- ============================== DEUTSCH ============================== -->
-    <section lang="de" class="show">
+    <section lang="de">
       <h2>Datenschutzerklärung</h2>
-      <p class="muted">Stand: 17. Juni 2026</p>
+      <p class="muted">Stand: 18. Juni 2026</p>
 
-      <h3>1. Verantwortlicher</h3>
-      <div class="box">
-        <p>
-          Philipp Aigner<br />
-          Arndtstraße 48<br />
-          1120 Wien, Österreich<br />
-          E-Mail: <a class="email" data-user="galleryroulette" data-domain="paigner.at"><noscript>galleryroulette [at] paigner.at</noscript></a>
-        </p>
-      </div>
-
-      <h3>2. Überblick</h3>
+      <h3>1. Überblick</h3>
       <p>
         GalleryRoulette ist ein Multiplayer-Ratespiel. Die Mitspieler sehen zufällige Fotos aus den
         Galerien der anderen Teilnehmer und raten, wem das Foto gehört. Diese Erklärung beschreibt,
         welche personenbezogenen Daten wir verarbeiten, wenn du die App nutzt.
       </p>
 
-      <h3>3. Welche Daten wir verarbeiten</h3>
+      <h3>2. Welche Daten wir verarbeiten</h3>
       <ul>
         <li><strong>Gast-Nutzung:</strong> Spitzname (frei wählbar) sowie technische Verbindungsdaten,
           solange du in einem Spielraum bist. Es ist kein Konto erforderlich.</li>
@@ -87,7 +77,16 @@
           zusammen mit diesen Werten in einer öffentlich einsehbaren Bestenliste an. Als Gast wirst du
           nicht in der Bestenliste geführt.</li>
         <li><strong>Spiel-Fotos:</strong> Die Fotos, die du während eines Spiels aus deiner Galerie
-          auswählst, werden hochgeladen und für die Dauer des Spiels den Mitspielern angezeigt.</li>
+          auswählst, werden vor dem Hochladen automatisch verkleinert und neu kodiert; dabei werden
+          eingebettete Metadaten (insbesondere GPS-Standort, Aufnahmedatum und Kamera-Informationen)
+          entfernt. Übertragen wird ausschließlich der reine Bildinhalt. Die Fotos werden den
+          Mitspielern nur für die Dauer des laufenden Spiels angezeigt.</li>
+        <li><strong>Reaktionen im Spiel:</strong> Während einer Runde kannst du Emoji-Reaktionen
+          senden. Diese werden den Mitspielern in Echtzeit angezeigt und nach Rundenende nicht
+          gespeichert.</li>
+        <li><strong>Sichtbarkeit für Mitspieler:</strong> Dein Spitzname ist für alle im selben
+          Spielraum sichtbar. Als angemeldeter Nutzer sind zusätzlich dein Profilbild und dein
+          Eintrag in der Bestenliste für andere angemeldete Nutzer sichtbar.</li>
         <li><strong>Server-Logs:</strong> Beim Verbinden verarbeitet unser Spielserver technische Daten
           wie deine IP-Adresse und Zeitstempel, um die App bereitzustellen und Missbrauch abzuwehren.
           </li>
@@ -97,7 +96,7 @@
           Sicherheit der App und werden nicht zu Werbe- oder Analysezwecken genutzt.</li>
       </ul>
 
-      <h3>4. Zwecke und Rechtsgrundlagen</h3>
+      <h3>3. Zwecke und Rechtsgrundlagen</h3>
       <ul>
         <li>Bereitstellung des Spiels und der Spielräume (Art. 6 Abs. 1 lit. b DSGVO - Vertrag/Nutzung).</li>
         <li>Verwaltung deines Kontos und Profilbilds, sofern du dich anmeldest (Art. 6 Abs. 1 lit. b DSGVO).</li>
@@ -108,7 +107,7 @@
         <li>Fehler- und Absturzüberwachung zur Gewährleistung der Stabilität und Sicherheit der App (Art. 6 Abs. 1 lit. f DSGVO - berechtigtes Interesse).</li>
       </ul>
 
-      <h3>5. Wichtiger Hinweis zu Fotos von Personen</h3>
+      <h3>4. Wichtiger Hinweis zu Fotos von Personen</h3>
       <div class="box">
         <p>
           Wenn deine Fotos andere Personen abbilden, werden diese während des Spiels für die Mitspieler
@@ -116,12 +115,20 @@
           Einverständnis der abgebildeten Personen. Du bist für die von dir ausgewählten Inhalte selbst
           verantwortlich.
         </p>
+        <p>
+          <strong>Inhalte melden:</strong> Wenn du auf einem in der App gezeigten Foto abgebildet
+          bist oder unangemessene Inhalte melden möchtest, kontaktiere uns unter der unten (Abschnitt 10)
+          genannten E-Mail-Adresse; wir reagieren zeitnah. Da Fotos nach jeder Runde und spätestens nach
+          2 Stunden gelöscht werden, ist die Meldung eines konkreten Bildes am wirksamsten während
+          eines laufenden Spiels.
+        </p>
       </div>
 
-      <h3>6. Speicherdauer</h3>
+      <h3>5. Speicherdauer</h3>
       <ul>
-        <li><strong>Spiel-Fotos:</strong> werden nur temporär auf dem Spielserver gehalten und spätestens
-          nach <strong>2 Stunden automatisch gelöscht</strong> (in der Regel früher, mit Ende des Spiels).</li>
+        <li><strong>Spiel-Fotos:</strong> werden nur temporär auf dem Spielserver gehalten,
+          <strong>nach jeder Runde gelöscht</strong> und spätestens nach <strong>2 Stunden</strong>
+          (Worst Case) endgültig entfernt.</li>
         <li><strong>Server-Logs (IP-Adresse):</strong> werden nur kurzzeitig zur Bereitstellung und
           Missbrauchsabwehr verarbeitet und nicht dauerhaft gespeichert.</li>
         <li><strong>Fehler- und Absturzberichte:</strong> werden bei unserem Monitoring-Dienst nur für eine
@@ -131,7 +138,7 @@
         <li><strong>Konto-Daten, Profilbild und Statistiken:</strong> bis du dein Konto löschst.</li>
       </ul>
 
-      <h3>7. Empfänger / Auftragsverarbeiter</h3>
+      <h3>6. Empfänger / Auftragsverarbeiter</h3>
       <p>
         Zur Bereitstellung der App setzen wir <strong>Supabase</strong> (Authentifizierung, Datenbank,
         Speicher für Profilbilder) als Auftragsverarbeiter ein. Für die Fehler- und Absturzüberwachung nutzen
@@ -154,7 +161,7 @@
         <strong>Standardvertragsklauseln</strong> abgesichert.
       </p>
 
-      <h3>8. Deine Rechte</h3>
+      <h3>7. Deine Rechte</h3>
       <p>
         Du hast das Recht auf Auskunft, Berichtigung, Löschung, Einschränkung der Verarbeitung,
         Datenübertragbarkeit und Widerspruch. Zudem kannst du dich bei einer Aufsichtsbehörde beschweren -
@@ -166,42 +173,42 @@
         und die zugehörigen Daten gelöscht.
       </p>
 
-      <h3>9. Kinder</h3>
+      <h3>8. Kinder</h3>
       <p>
         Die App richtet sich nicht an junge Kinder. In Österreich ist für die eigenständige Nutzung ein
         Mindestalter von 14 Jahren erforderlich; in anderen Ländern gilt das jeweils lokal vorgeschriebene
         Mindestalter. Nutze die App nur, wenn du dieses Alter erreicht hast.
       </p>
 
-      <h3>10. Änderungen</h3>
+      <h3>9. Änderungen</h3>
       <p>
         Wir können diese Erklärung anpassen. Die jeweils aktuelle Fassung ist über diese Seite abrufbar.
       </p>
-    </section>
 
-    <!-- ============================== ENGLISH ============================== -->
-    <section lang="en">
-      <h2>Privacy Policy</h2>
-      <p class="muted">Last updated: 17 June 2026</p>
-
-      <h3>1. Data Controller</h3>
+      <h3>10. Verantwortlicher</h3>
       <div class="box">
         <p>
           Philipp Aigner<br />
           Arndtstraße 48<br />
-          1120 Vienna, Austria<br />
-          Email: <a class="email" data-user="galleryroulette" data-domain="paigner.at"><noscript>galleryroulette [at] paigner.at</noscript></a>
+          1120 Wien, Österreich<br />
+          E-Mail: <a class="email" data-user="galleryroulette" data-domain="paigner.at"><noscript>galleryroulette [at] paigner.at</noscript></a>
         </p>
       </div>
+    </section>
 
-      <h3>2. Overview</h3>
+    <!-- ============================== ENGLISH ============================== -->
+    <section lang="en" class="show">
+      <h2>Privacy Policy</h2>
+      <p class="muted">Last updated: 18 June 2026</p>
+
+      <h3>1. Overview</h3>
       <p>
         GalleryRoulette is a multiplayer guessing game. Players see random photos from other participants'
         galleries and guess whom each photo belongs to. This policy explains which personal data we process
         when you use the app.
       </p>
 
-      <h3>3. Data we process</h3>
+      <h3>2. Data we process</h3>
       <ul>
         <li><strong>Guest use:</strong> a nickname of your choice and technical connection data for as long
           as you are in a game room. No account is required.</li>
@@ -213,8 +220,16 @@
         <li><strong>Statistics &amp; leaderboard:</strong> if you are signed in, we store game statistics
           (e.g. games played, wins, total score) and display your display name together with these values
           on a publicly visible leaderboard. Guests are not included in the leaderboard.</li>
-        <li><strong>Game photos:</strong> the photos you select from your gallery during a game are uploaded
-          and shown to fellow players for the duration of the game.</li>
+        <li><strong>Game photos:</strong> the photos you select from your gallery during a game are
+          automatically downsized and re-encoded before upload; this removes embedded metadata (in
+          particular GPS location, capture date and camera information). Only the plain image content
+          is transmitted. The photos are shown to fellow players only for the duration of the ongoing
+          game.</li>
+        <li><strong>In-game reactions:</strong> during a round you can send emoji reactions. These are
+          shown to fellow players in real time and are not stored after the round ends.</li>
+        <li><strong>Visibility to other players:</strong> your nickname is visible to everyone in the
+          same game room. If you are signed in, your profile picture and your leaderboard entry are
+          also visible to other signed-in users.</li>
         <li><strong>Server logs:</strong> when connecting, our game server processes technical data such as
           your IP address and timestamps to provide the app and prevent abuse.</li>
         <li><strong>Error and crash reports:</strong> if a technical error occurs, we transmit technical
@@ -223,7 +238,7 @@
           not used for advertising or analytics.</li>
       </ul>
 
-      <h3>4. Purposes and legal bases</h3>
+      <h3>3. Purposes and legal bases</h3>
       <ul>
         <li>Providing the game and game rooms (Art. 6(1)(b) GDPR - performance/use).</li>
         <li>Managing your account and profile picture if you sign in (Art. 6(1)(b) GDPR).</li>
@@ -234,19 +249,26 @@
         <li>Error and crash monitoring to ensure the stability and security of the app (Art. 6(1)(f) GDPR - legitimate interest).</li>
       </ul>
 
-      <h3>5. Important note about photos of people</h3>
+      <h3>4. Important note about photos of people</h3>
       <div class="box">
         <p>
           If your photos depict other people, those people become visible to fellow players during the game.
           Only upload photos you have the rights to and - where required - the consent of the people shown.
           You are responsible for the content you select.
         </p>
+        <p>
+          <strong>Reporting content:</strong> If you are depicted in a photo shown in the app, or want
+          to report inappropriate content, contact us at the email address below (section 10) and we will
+          respond promptly. As photos are deleted after each round and within 2 hours at the latest, reporting
+          a specific image is most effective during an active game.
+        </p>
       </div>
 
-      <h3>6. Retention</h3>
+      <h3>5. Retention</h3>
       <ul>
-        <li><strong>Game photos:</strong> held only temporarily on the game server and
-          <strong>automatically deleted after at most 2 hours</strong> (usually sooner, when the game ends).</li>
+        <li><strong>Game photos:</strong> held only temporarily on the game server,
+          <strong>deleted after each round</strong> and permanently removed within
+          <strong>2 hours</strong> at the latest (worst case).</li>
         <li><strong>Server logs (IP address):</strong> processed only transiently for operation and abuse
           prevention and not stored permanently.</li>
         <li><strong>Error and crash reports:</strong> retained by our monitoring service only for a limited
@@ -256,7 +278,7 @@
         <li><strong>Account data, profile picture and statistics:</strong> until you delete your account.</li>
       </ul>
 
-      <h3>7. Recipients / processors</h3>
+      <h3>6. Recipients / processors</h3>
       <p>
         To provide the app we use <strong>Supabase</strong> (authentication, database, storage for profile
         pictures) as a processor. For error and crash monitoring we use <strong>Sentry</strong> (Functional
@@ -278,7 +300,7 @@
         EU Commission.
       </p>
 
-      <h3>8. Your rights</h3>
+      <h3>7. Your rights</h3>
       <p>
         You have the right to access, rectification, erasure, restriction of processing, data portability and
         objection. You may also lodge a complaint with a supervisory authority - in Austria, the Austrian
@@ -289,17 +311,27 @@
         app under <em>Profile → Delete account</em>. This removes your account, profile picture and related data.
       </p>
 
-      <h3>9. Children</h3>
+      <h3>8. Children</h3>
       <p>
         The app is not directed at young children. In Austria, a minimum age of 14 applies to using it
         independently; in other countries the minimum age required by your local law applies. Only use the
         app if you have reached that age.
       </p>
 
-      <h3>10. Changes</h3>
+      <h3>9. Changes</h3>
       <p>
         We may update this policy. The current version is always available on this page.
       </p>
+
+      <h3>10. Data Controller</h3>
+      <div class="box">
+        <p>
+          Philipp Aigner<br />
+          Arndtstraße 48<br />
+          1120 Vienna, Austria<br />
+          Email: <a class="email" data-user="galleryroulette" data-domain="paigner.at"><noscript>galleryroulette [at] paigner.at</noscript></a>
+        </p>
+      </div>
     </section>
   </div>
 
@@ -312,8 +344,8 @@
       document.getElementById('btn-en').classList.toggle('active', lang === 'en');
       document.documentElement.setAttribute('lang', lang);
     }
-    // Standard nach Browsersprache: Deutsch -> de, sonst en.
-    show((navigator.language || 'de').toLowerCase().startsWith('de') ? 'de' : 'en');
+    // Hauptsprache Englisch; Deutsch ist über den Umschalter erreichbar.
+    show('en');
 
     // E-Mail erst im Browser zusammensetzen (Schutz gegen naive Scraper).
     // Die vollständige Adresse steht nirgends zusammenhängend im Quelltext.
