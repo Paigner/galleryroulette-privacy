@@ -75,6 +75,55 @@
         line-height: 21px;
         color: #F87171;
       }
+      .divider {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        margin: 28px 0 18px;
+      }
+      .divider::before,
+      .divider::after {
+        content: "";
+        flex: 1;
+        height: 1px;
+        background-color: #252535;
+      }
+      .divider span {
+        font-size: 12px;
+        font-weight: 600;
+        color: #4A4A70;
+        white-space: nowrap;
+      }
+      .codeBox {
+        display: inline-block;
+        background-color: #16161F;
+        border: 1px solid #252535;
+        border-radius: 14px;
+        padding: 16px 28px;
+        font-size: 32px;
+        font-weight: 800;
+        letter-spacing: 10px;
+        color: #A855F7;
+        font-family: "SF Mono", Menlo, Consolas, monospace;
+        user-select: all;
+        -webkit-user-select: all;
+      }
+      .copyBtn {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        margin-top: 16px;
+        background-color: #16161F;
+        color: #A855F7;
+        border: 1px solid #3A2A55;
+        border-radius: 12px;
+        padding: 11px 22px;
+        font-size: 14px;
+        font-weight: 700;
+        cursor: pointer;
+      }
+      .copyBtn:active { opacity: 0.7; }
+      .copyBtn.copied { color: #34D399; border-color: #1F4D3A; }
       .footer {
         margin-top: 18px;
         font-size: 11px;
@@ -100,10 +149,24 @@
           </p>
           <a id="open" class="btn" href="#">In GalleryRoulette öffnen →</a>
           <p class="hint">
-            Öffnet sich die App nicht? Gib den 6-stelligen Code aus der E-Mail
-            direkt in der App ein.<br />
-            <span class="en">App didn't open? Enter the 6-digit code from the email in the app.</span>
+            Öffnet sich die App nicht? Nutze den Code unten.<br />
+            <span class="en">App didn't open? Use the code below.</span>
           </p>
+        </div>
+
+        <!-- 6-stelliger Code (wird angezeigt, NICHT verifiziert) -->
+        <div id="codeSection" hidden>
+          <div class="divider"><span>oder Code eingeben / or enter the code</span></div>
+          <p>
+            Gib diesen Code in der App ein:<br />
+            <span class="en">Enter this code in the app:</span>
+          </p>
+          <div id="code" class="codeBox"></div>
+          <div>
+            <button id="copy" type="button" class="copyBtn">
+              <span id="copyLabel">Code kopieren / Copy code</span>
+            </button>
+          </div>
         </div>
 
         <!-- Fehlerfall (kein/ungültiger Token in der URL) -->
@@ -129,22 +192,66 @@
         var q = new URLSearchParams(location.search);
         var tokenHash = q.get("token_hash") || "";
         var type = q.get("type") || "email";
+        var code = (q.get("code") || "").replace(/[^0-9]/g, "");
 
         var ok = document.getElementById("ok");
         var err = document.getElementById("err");
+        var codeSection = document.getElementById("codeSection");
 
-        if (!tokenHash) {
-          err.hidden = false;
-          return;
+        // Button (Deep-Link), nur wenn ein Token da ist.
+        if (tokenHash) {
+          var deep =
+            "galleryroulette://auth/callback?token_hash=" +
+            encodeURIComponent(tokenHash) +
+            "&type=" +
+            encodeURIComponent(type);
+          document.getElementById("open").setAttribute("href", deep);
+          ok.hidden = false;
         }
 
-        var deep =
-          "galleryroulette://auth/callback?token_hash=" +
-          encodeURIComponent(tokenHash) +
-          "&type=" +
-          encodeURIComponent(type);
-        document.getElementById("open").setAttribute("href", deep);
-        ok.hidden = false;
+        // Code-Anzeige + Copy-Button, nur wenn ein Code übergeben wurde.
+        if (code) {
+          document.getElementById("code").textContent = code;
+          codeSection.hidden = false;
+
+          var btn = document.getElementById("copy");
+          var label = document.getElementById("copyLabel");
+          btn.addEventListener("click", function () {
+            function done() {
+              btn.classList.add("copied");
+              label.textContent = "Kopiert! / Copied!";
+              setTimeout(function () {
+                btn.classList.remove("copied");
+                label.textContent = "Code kopieren / Copy code";
+              }, 2000);
+            }
+            if (navigator.clipboard && navigator.clipboard.writeText) {
+              navigator.clipboard.writeText(code).then(done, fallbackCopy);
+            } else {
+              fallbackCopy();
+            }
+            function fallbackCopy() {
+              try {
+                var ta = document.createElement("textarea");
+                ta.value = code;
+                ta.style.position = "fixed";
+                ta.style.opacity = "0";
+                document.body.appendChild(ta);
+                ta.select();
+                document.execCommand("copy");
+                document.body.removeChild(ta);
+                done();
+              } catch (e) {
+                /* Clipboard nicht verfügbar — Code ist per user-select trotzdem markierbar. */
+              }
+            }
+          });
+        }
+
+        // Nur wenn WEDER Token NOCH Code da ist → Fehlerhinweis.
+        if (!tokenHash && !code) {
+          err.hidden = false;
+        }
       })();
     </script>
   </body>
