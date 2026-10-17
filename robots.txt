@@ -1,0 +1,6 @@
+# privacy.galleryroulette.paigner.at – Datenschutzerklärung
+User-agent: *
+Allow: /
+
+# Gemeinsame Sitemap liegt auf der Hauptdomain;
+Sitemap: https://galleryroulette.paigner.at/sitemap.xml
